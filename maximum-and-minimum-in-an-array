@@ -1,0 +1,17 @@
+
+//https://www.geeksforgeeks.org/maximum-and-minimum-in-an-array/
+
+import java.util.Arrays;
+public class Max {
+    public static void main(String[] args) {
+        int arr[]={3,5,4,1,9};
+        maxmin(arr);
+    }
+    public static void maxmin(int arr[])
+    {
+        Arrays.sort(arr);
+            System.out.println("Minimum Element is:"+arr[0]);
+            System.out.println("Maximum Element is:"+arr[arr.length-1]);
+        
+    }
+}
