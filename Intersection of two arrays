@@ -1,0 +1,27 @@
+https://practice.geeksforgeeks.org/problems/intersection-of-two-arrays2404/1?utm_source=gfg&utm_medium=article&utm_campaign=bottom_sticky_on_article
+
+class Solution {
+    // Function to return the count of the number of elements in
+    // the intersection of two arrays.
+    public static int NumberofElementsInIntersection(int a[], int b[], int n, int m) {
+         HashSet<Integer> s = new HashSet<>();
+    Arrays.sort(a);
+    Arrays.sort(b);
+    int i=0;
+    int j=0;
+    
+    while(i<n && j<m)
+    {
+          if (a[i] < b[j]) {
+                i++;
+            } else if (a[i] > b[j]) {
+                j++;
+            } else {
+                s.add(a[i]);
+                i++;
+                j++;
+            }
+    }
+    return s.size();
+    }
+}
